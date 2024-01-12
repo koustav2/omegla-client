@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import Room from "./components/Room";
+import Room from "./components/Room"; // Correct the import statement
 
 function App() {
   return (
