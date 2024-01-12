@@ -24,7 +24,7 @@ function Home() {
       </button>
       <button
         onClick={() => {
-          navigate("/room");
+          navigate(`/room/?name=${name}`);
         }}
       >
         Room

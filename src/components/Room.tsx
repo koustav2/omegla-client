@@ -4,10 +4,13 @@ import { useSearchParams } from "react-router-dom";
 import { Socket, io } from "socket.io-client";
 import { useNavigate } from "react-router-dom";
 
-const URL = process.env.REACT_APP_SERVER_URL;
 function Room() {
-  console.log(URL);
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const name = searchParams.get("name");
+  useEffect(() => {
+    console.log(name);
+  }, [name]);
   return (
     <>
       <button
