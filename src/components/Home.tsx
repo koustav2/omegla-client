@@ -1,10 +1,12 @@
 import "../App.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [name, setName] = useState("");
   const [joined, setJoined] = useState(false);
+  const navigate = useNavigate();
   return (
     <div>
       <input
@@ -20,9 +22,13 @@ function Home() {
       >
         Join
       </button>
-      <Link to="/room">
-        <button>Room</button>
-      </Link>
+      <button
+        onClick={() => {
+          navigate("/room");
+        }}
+      >
+        Room
+      </button>
     </div>
   );
 }
